@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sushathna Corp | IT Solutions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body { margin:0; font-family: 'Segoe UI', sans-serif; background:#f5f7fa; }
+
+header {
+  display:flex;
+  justify-content:space-between;
+  padding:20px 40px;
+  background:#1f2d3d;
+  color:white;
+}
+
+nav a {
+  color:white;
+  margin:0 15px;
+  text-decoration:none;
+  font-weight:500;
+}
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+  url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
+  background-size:cover;
+  color:white;
+  text-align:center;
+  padding:120px 20px;
+}
+
+.hero h1 { font-size:42px; }
+
+.btn {
+  background:#ff6b00;
+  padding:12px 25px;
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+  display:inline-block;
+  margin-top:15px;
+}
+
+.section {
+  padding:60px 20px;
+  text-align:center;
+}
+
+.services {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.card {
+  width:260px;
+  margin:15px;
+  padding:25px;
+  border-radius:12px;
+  background:white;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+form {
+  background:white;
+  padding:30px;
+  max-width:400px;
+  margin:auto;
+  border-radius:10px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+form input, form textarea {
+  width:90%;
+  padding:12px;
+  margin:10px;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+
+form button {
+  background:#1f2d3d;
+  color:white;
+  padding:12px 20px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+footer {
+  background:#1f2d3d;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+/* WhatsApp */
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  font-size:20px;
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>Sushathna Corp</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>Reliable Digital & IT Solutions</h1>
+  <p>We help businesses grow with modern technology</p>
+  <a href="#contact" class="btn">Get in Touch</a>
+</div>
+
+<div class="section" id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">Website Development</div>
+    <div class="card">IT Support</div>
+    <div class="card">Digital Solutions</div>
+    <div class="card">Consulting</div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>About Us</h2>
+  <p>We deliver reliable, scalable, and efficient IT solutions tailored for businesses.</p>
+</div>
+
+<div class="section" id="contact">
+  <h2>Contact Us</h2>
+
+<form name="contact" data-netlify="true" hidden>
+  <input type="text" name="name">
+</form>
+
+  <!-- Netlify Form FIXED -->
+<form name="contact" method="POST" data-netlify="true" action="/thank-you.html">
+  <input type="hidden" name="form-name" value="contact">
+
+  <p hidden>
+    <input name="bot-field">
+  </p>
+
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+
+  <button type="submit">Send Message</button>
+</form>
+
+  <p><strong>Proprietor:</strong> Nalini Suresh Kumar</p>
+  <p><strong>Email:</strong> info@sushathna.com</p>
+</div>
+
+<footer>
+  © 2026 Sushathna Corp | All Rights Reserved
+</footer>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/917305016955" target="_blank" class="whatsapp">💬</a>
+
+</body>
+</html>
