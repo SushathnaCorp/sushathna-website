@@ -5,14 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body { margin:0; font-family: 'Segoe UI', sans-serif; background:#f5f7fa; }
+body {
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background:#f5f7fa;
+  scroll-behavior:smooth;
+}
 
+/* HEADER */
 header {
   display:flex;
   justify-content:space-between;
   padding:20px 40px;
   background:#1f2d3d;
   color:white;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
 nav a {
@@ -22,6 +31,7 @@ nav a {
   font-weight:500;
 }
 
+/* HERO */
 .hero {
   background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
   url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
@@ -33,6 +43,7 @@ nav a {
 
 .hero h1 { font-size:42px; }
 
+/* BUTTON */
 .btn {
   background:#ff6b00;
   padding:12px 25px;
@@ -41,13 +52,17 @@ nav a {
   border-radius:6px;
   display:inline-block;
   margin-top:15px;
+  transition:0.3s;
 }
+.btn:hover { background:#e85d00; }
 
+/* SECTION */
 .section {
   padding:60px 20px;
   text-align:center;
 }
 
+/* SERVICES */
 .services {
   display:flex;
   flex-wrap:wrap;
@@ -63,12 +78,12 @@ nav a {
   box-shadow:0 5px 15px rgba(0,0,0,0.08);
   transition:0.3s;
 }
-
 .card:hover {
-  transform:translateY(-5px);
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  transform:translateY(-6px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.15);
 }
 
+/* FORM */
 form {
   background:white;
   padding:30px;
@@ -93,8 +108,13 @@ form button {
   border:none;
   border-radius:6px;
   cursor:pointer;
+  transition:0.3s;
+}
+form button:hover {
+  background:#16212c;
 }
 
+/* FOOTER */
 footer {
   background:#1f2d3d;
   color:white;
@@ -102,17 +122,18 @@ footer {
   padding:20px;
 }
 
-/* WhatsApp */
+/* WHATSAPP */
 .whatsapp {
   position:fixed;
   bottom:20px;
   right:20px;
   background:#25D366;
   color:white;
-  padding:15px;
+  padding:16px;
   border-radius:50%;
-  font-size:20px;
+  font-size:22px;
   text-decoration:none;
+  box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 </style>
 </head>
@@ -152,24 +173,18 @@ footer {
 <div class="section" id="contact">
   <h2>Contact Us</h2>
 
-<form name="contact" data-netlify="true" hidden>
-  <input type="text" name="name">
-</form>
+  <!-- FORM SPREE FORM -->
+  <form action="https://formspree.io/f/mojpgwjl" method="POST">
 
-  <!-- Netlify Form FIXED -->
-<form name="contact" method="POST" data-netlify="true" action="/thank-you.html">
-  <input type="hidden" name="form-name" value="contact">
+    <input type="hidden" name="_next" value="https://sushathna.com/thank-you.html">
 
-  <p hidden>
-    <input name="bot-field">
-  </p>
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
 
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
 
-  <button type="submit">Send Message</button>
-</form>
+  </form>
 
   <p><strong>Proprietor:</strong> Nalini Suresh Kumar</p>
   <p><strong>Email:</strong> info@sushathna.com</p>
