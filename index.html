@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Sushathna Corp | IT Solutions</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sushathna Corp | IT Solutions</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+* { margin:0; padding:0; box-sizing:border-box; }
 body {
-  margin:0;
-  font-family: 'Segoe UI', sans-serif;
-  background:#f5f7fa;
+  font-family:'Poppins', sans-serif;
+  background:#f4f7fb;
   scroll-behavior:smooth;
 }
 
-/* HEADER */
+/* NAVBAR */
 header {
   display:flex;
   justify-content:space-between;
-  padding:20px 40px;
-  background:#1f2d3d;
+  align-items:center;
+  padding:18px 40px;
+  background:#0f172a;
   color:white;
   position:sticky;
   top:0;
@@ -33,32 +37,39 @@ nav a {
 
 /* HERO */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-  url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
+  background:
+    linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.8)),
+    url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
   background-size:cover;
   color:white;
   text-align:center;
   padding:120px 20px;
 }
 
-.hero h1 { font-size:42px; }
+.hero h1 {
+  font-size:48px;
+  margin-bottom:10px;
+}
 
-/* BUTTON */
+.hero p {
+  opacity:0.9;
+}
+
 .btn {
-  background:#ff6b00;
-  padding:12px 25px;
-  color:white;
-  text-decoration:none;
-  border-radius:6px;
+  margin-top:20px;
   display:inline-block;
-  margin-top:15px;
+  padding:14px 30px;
+  background:#ff6b00;
+  color:white;
+  border-radius:8px;
+  text-decoration:none;
   transition:0.3s;
 }
-.btn:hover { background:#e85d00; }
+.btn:hover { background:#e55d00; }
 
 /* SECTION */
 .section {
-  padding:60px 20px;
+  padding:70px 20px;
   text-align:center;
 }
 
@@ -73,14 +84,42 @@ nav a {
   width:260px;
   margin:15px;
   padding:25px;
-  border-radius:12px;
-  background:white;
-  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  border-radius:16px;
+  background:rgba(255,255,255,0.7);
+  backdrop-filter:blur(10px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
   transition:0.3s;
 }
 .card:hover {
-  transform:translateY(-6px);
-  box-shadow:0 12px 30px rgba(0,0,0,0.15);
+  transform:translateY(-8px);
+}
+
+/* WHY SECTION */
+.why {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.why div {
+  width:250px;
+  margin:15px;
+}
+
+/* TESTIMONIAL */
+.testimonial {
+  max-width:600px;
+  margin:auto;
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* CTA */
+.cta {
+  background:#0f172a;
+  color:white;
+  padding:50px 20px;
 }
 
 /* FORM */
@@ -89,37 +128,34 @@ form {
   padding:30px;
   max-width:400px;
   margin:auto;
-  border-radius:10px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 form input, form textarea {
-  width:90%;
+  width:100%;
   padding:12px;
-  margin:10px;
+  margin:10px 0;
   border-radius:6px;
   border:1px solid #ccc;
 }
 
 form button {
-  background:#1f2d3d;
+  width:100%;
+  padding:12px;
+  background:#0f172a;
   color:white;
-  padding:12px 20px;
   border:none;
   border-radius:6px;
   cursor:pointer;
-  transition:0.3s;
-}
-form button:hover {
-  background:#16212c;
 }
 
 /* FOOTER */
 footer {
-  background:#1f2d3d;
+  background:#0f172a;
   color:white;
-  text-align:center;
   padding:20px;
+  text-align:center;
 }
 
 /* WHATSAPP */
@@ -129,11 +165,11 @@ footer {
   right:20px;
   background:#25D366;
   color:white;
-  padding:16px;
-  border-radius:50%;
-  font-size:22px;
+  padding:14px 18px;
+  border-radius:50px;
+  font-size:14px;
   text-decoration:none;
-  box-shadow:0 4px 10px rgba(0,0,0,0.3);
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 </style>
 </head>
@@ -151,8 +187,8 @@ footer {
 
 <div class="hero">
   <h1>Reliable Digital & IT Solutions</h1>
-  <p>We help businesses grow with modern technology</p>
-  <a href="#contact" class="btn">Get in Touch</a>
+  <p>Helping businesses scale with modern technology</p>
+  <a href="#contact" class="btn">Start Project</a>
 </div>
 
 <div class="section" id="services">
@@ -166,16 +202,31 @@ footer {
 </div>
 
 <div class="section">
-  <h2>About Us</h2>
-  <p>We deliver reliable, scalable, and efficient IT solutions tailored for businesses.</p>
+  <h2>Why Choose Us</h2>
+  <div class="why">
+    <div>✔ Reliable Solutions</div>
+    <div>✔ Fast Delivery</div>
+    <div>✔ Affordable Pricing</div>
+    <div>✔ Expert Support</div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Client Feedback</h2>
+  <div class="testimonial">
+    “Professional service and excellent support. Highly recommended!”
+  </div>
+</div>
+
+<div class="cta">
+  <h2>Let’s Build Your Business Together</h2>
+  <a href="#contact" class="btn">Contact Now</a>
 </div>
 
 <div class="section" id="contact">
   <h2>Contact Us</h2>
 
-  <!-- FORM SPREE FORM -->
   <form action="https://formspree.io/f/mojpgwjl" method="POST">
-
     <input type="hidden" name="_next" value="https://sushathna.com/thank-you.html">
 
     <input type="text" name="name" placeholder="Your Name" required>
@@ -183,7 +234,6 @@ footer {
     <textarea name="message" placeholder="Your Message" required></textarea>
 
     <button type="submit">Send Message</button>
-
   </form>
 
   <p><strong>Proprietor:</strong> Nalini Suresh Kumar</p>
@@ -194,8 +244,9 @@ footer {
   © 2026 Sushathna Corp | All Rights Reserved
 </footer>
 
-<!-- WhatsApp -->
-<a href="https://wa.me/917305016955" target="_blank" class="whatsapp">💬</a>
+<a href="https://wa.me/917305016955" target="_blank" class="whatsapp">
+  💬 Chat
+</a>
 
 </body>
 </html>
