@@ -1,129 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<title>Sushathna Corp | IT Solutions & Website Development</title>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO TITLE -->
-<title>Sushathna Corp | IT Solutions, Website Development & Digital Services</title>
-
-<!-- SEO META -->
-<meta name="description" content="Sushathna Corp provides reliable IT solutions, website development, digital services, and consulting to help businesses grow online.">
-
-<meta name="keywords" content="IT solutions, website development, digital services, IT support, consulting, Sushathna Corp">
-
+<!-- SEO Meta -->
+<meta name="description" content="Sushathna Corp provides reliable IT solutions, website development, Android apps, and digital services for businesses.">
+<meta name="keywords" content="IT solutions, website development, Android app development, warranty manager app, digital services, consulting India">
 <meta name="author" content="Sushathna Corp">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<!-- GOOGLE ANALYTICS -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-06X1KVG52L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-06X1KVG52L');
-</script>
+<!-- Google Analytics (keep your existing one below this if added) -->
 
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Poppins', sans-serif; background:#f4f7fb; scroll-behavior:smooth; }
+body { margin:0; font-family: 'Segoe UI', sans-serif; background:#f5f7fa; }
 
-/* NAVBAR */
 header {
   display:flex;
   justify-content:space-between;
-  align-items:center;
-  padding:18px 40px;
-  background:#0f172a;
+  padding:20px 40px;
+  background:#1f2d3d;
   color:white;
-  position:sticky;
-  top:0;
 }
+
 nav a {
   color:white;
   margin:0 15px;
   text-decoration:none;
+  font-weight:500;
 }
 
-/* HERO */
 .hero {
-  background: linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.8)),
+  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
   url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
   background-size:cover;
   color:white;
   text-align:center;
   padding:120px 20px;
 }
-.hero h1 { font-size:44px; }
+
+.hero h1 { font-size:42px; }
+
 .btn {
-  margin-top:20px;
-  display:inline-block;
-  padding:14px 30px;
   background:#ff6b00;
+  padding:12px 25px;
   color:white;
-  border-radius:8px;
   text-decoration:none;
+  border-radius:6px;
+  display:inline-block;
+  margin-top:15px;
 }
 
-/* SECTION */
-.section { padding:70px 20px; text-align:center; }
+.section {
+  padding:60px 20px;
+  text-align:center;
+}
 
-/* SERVICES */
-.services { display:flex; flex-wrap:wrap; justify-content:center; }
+.services {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
 .card {
   width:260px;
   margin:15px;
   padding:25px;
-  border-radius:16px;
+  border-radius:12px;
   background:white;
-  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
-/* WHY */
-.why { display:flex; flex-wrap:wrap; justify-content:center; }
-.why div { width:250px; margin:15px; }
-
-/* FORM */
 form {
   background:white;
   padding:30px;
   max-width:400px;
   margin:auto;
-  border-radius:12px;
+  border-radius:10px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
+
 form input, form textarea {
-  width:100%;
+  width:90%;
   padding:12px;
-  margin:10px 0;
+  margin:10px;
+  border-radius:6px;
+  border:1px solid #ccc;
 }
+
 form button {
-  width:100%;
-  padding:12px;
-  background:#0f172a;
+  background:#1f2d3d;
   color:white;
+  padding:12px 20px;
   border:none;
+  border-radius:6px;
 }
 
-/* FOOTER */
 footer {
-  background:#0f172a;
+  background:#1f2d3d;
   color:white;
-  padding:20px;
   text-align:center;
+  padding:20px;
 }
 
-/* WHATSAPP */
 .whatsapp {
   position:fixed;
   bottom:20px;
   right:20px;
   background:#25D366;
   color:white;
-  padding:14px 18px;
-  border-radius:50px;
-  text-decoration:none;
+  padding:15px;
+  border-radius:50%;
 }
 </style>
 </head>
@@ -135,74 +123,82 @@ footer {
   <nav>
     <a href="#">Home</a>
     <a href="#services">Services</a>
+    <a href="#app">Our App</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <!-- HERO -->
 <div class="hero">
-  <h1>Reliable IT Solutions & Website Development Services</h1>
-  <p>We help businesses grow with modern digital technology</p>
+  <h1>IT Solutions & Website Development Company</h1>
+  <p>We build modern websites, Android apps, and digital solutions for businesses</p>
   <a href="#contact" class="btn">Get in Touch</a>
 </div>
 
 <!-- SERVICES -->
 <div class="section" id="services">
-  <h2>Our Services</h2>
+  <h2>Our IT Services</h2>
   <div class="services">
-    <div class="card">Website Development</div>
-    <div class="card">IT Support</div>
-    <div class="card">Digital Solutions</div>
-    <div class="card">Consulting Services</div>
+    <div class="card">
+      <h3>Website Development</h3>
+      <p>Professional business websites with modern UI and SEO optimization.</p>
+    </div>
+    <div class="card">
+      <h3>Android App Development</h3>
+      <p>Custom Android apps tailored for business needs.</p>
+    </div>
+    <div class="card">
+      <h3>IT Support</h3>
+      <p>Reliable IT support and infrastructure solutions.</p>
+    </div>
+    <div class="card">
+      <h3>Consulting</h3>
+      <p>Expert consulting for digital transformation.</p>
+    </div>
   </div>
+</div>
+
+<!-- APP SECTION -->
+<div class="section" id="app">
+  <h2>Our Product - Warranty Manager App</h2>
+  <p>
+    Warranty Manager is an Android app designed to help users track product warranties,
+    manage invoices, and receive reminders before expiry.
+  </p>
+  <p>
+    Ideal for individuals and businesses to organize and manage their assets efficiently.
+  </p>
 </div>
 
 <!-- ABOUT -->
 <div class="section">
-  <h2>About Us</h2>
+  <h2>About Sushathna Corp</h2>
   <p>
-    Sushathna Corp is a professional IT solutions provider offering website development,
-    IT support, digital transformation, and consulting services. We help businesses
-    improve efficiency, grow online presence, and adopt modern technologies.
+    Sushathna Corp is a growing IT solutions company delivering scalable,
+    secure, and innovative digital products for modern businesses.
   </p>
-</div>
-
-<!-- WHY -->
-<div class="section">
-  <h2>Why Choose Us</h2>
-  <div class="why">
-    <div>✔ Reliable IT Solutions</div>
-    <div>✔ Fast Project Delivery</div>
-    <div>✔ Affordable Pricing</div>
-    <div>✔ Expert Technical Support</div>
-  </div>
 </div>
 
 <!-- CONTACT -->
 <div class="section" id="contact">
   <h2>Contact Us</h2>
 
-  <form action="https://formspree.io/f/mojpgwjl" method="POST">
-    <input type="hidden" name="_next" value="https://www.sushathna.com/thank-you.html">
-
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
-
-    <button type="submit">Send Message</button>
-  </form>
+<form action="https://formspree.io/f/your-form-id" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
 
   <p><strong>Proprietor:</strong> Nalini Suresh Kumar</p>
-  <p><strong>Email:</strong> info@sushathna.com</p>
+  <p><strong>Email:</strong> info [at] sushathna [dot] com</p>
 </div>
 
 <footer>
   © 2026 Sushathna Corp | All Rights Reserved
 </footer>
 
-<a href="https://wa.me/917305016955" target="_blank" class="whatsapp">
-  💬 Chat
-</a>
+<a href="https://wa.me/917305016955" target="_blank" class="whatsapp">💬</a>
 
 </body>
 </html>
